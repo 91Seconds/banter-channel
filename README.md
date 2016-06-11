@@ -1,2 +1,2 @@
-# banter-channel
-a messaging app 
+# The Banter Channel 
+Oi oi cheeky af 
