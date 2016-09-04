@@ -1,1 +1,4 @@
-console.log('This would be the main JS file.');
+<button type="button"
+onclick="document.getElementByID('buttonid').style.color
+='red'">
+/button>
