@@ -1,2 +1,3 @@
-# The Banter Channel 
-Oi oi cheeky af 
+# The Banter Channal
+~~~supporting readme and dev notes
+you're a lil fgt - NZVortex
