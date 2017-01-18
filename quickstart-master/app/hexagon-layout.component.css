@@ -68,6 +68,7 @@ body {
 
 .hex h1,
 .hex p {
+    color: white;
     width: 102%;
     left: -1%;
     /* prevent line on the right where background doesn't cover image */
