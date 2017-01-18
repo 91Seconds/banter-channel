@@ -1,4 +1,4 @@
-"use strict";
-exports.PAGES = [
+import { Page } from './page'
+export const PAGES = [
     { imgSrc: '' },
     ];
