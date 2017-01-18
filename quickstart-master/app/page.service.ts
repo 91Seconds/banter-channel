@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class PageService {
+  getPages(): Promise<Page[]> {
+    return Promise.resolve(PAGES)
+  }
   // getHeroes(): Promise<Hero[]> {
   //   return Promise.resolve(HEROES);
   // }
