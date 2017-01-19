@@ -5,6 +5,7 @@ import { HttpModule }    from '@angular/http';
 import { AppComponent }  from './app.component';
 import { HexagonTileComponent } from './hexagon-tile.component'
 import { HexagonLayoutComponent } from './hexagon-layout.component'
+import { AnimatedLogoComponent } from './animated-logo.component'
 import { PageService } from './page.service'
 
 @NgModule({
@@ -14,7 +15,8 @@ import { PageService } from './page.service'
   declarations: [ 
     AppComponent,
     HexagonTileComponent,
-    HexagonLayoutComponent
+    HexagonLayoutComponent,
+    AnimatedLogoComponent
   ],
   bootstrap:    [ AppComponent ],
   providers:    [ PageService ]

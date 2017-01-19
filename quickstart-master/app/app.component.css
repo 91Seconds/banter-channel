@@ -1,9 +1,0 @@
-/*.radial-progress-cover:hover {
-    animation-name: example;
-    animation-duration: 4s;
-     stroke-dasharray: 9em, 24em; 
-}
-@keyframes example {
-    0%   {stroke-dasharray: 0em, 25em;}
-    100% {stroke-dasharray: 20em, 25em;}
-}*/
