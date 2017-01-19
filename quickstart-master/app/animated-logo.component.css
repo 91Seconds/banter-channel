@@ -1,19 +1,22 @@
 /*centering the logo before the animation*/
+
 .animated-logo svg {
-    transform: translateX(4.5em);
+    width: 10em;
 }
 
 .animated-logo svg:hover {
-    transform: translateX(4.5em);
     animation-name: re-center;
     animation-duration: 1s;
     animation-fill-mode: both;
 }
 
+
 /*static styles*/
+
 .c-attached {
     stroke: deeppink;
 }
+
 .c-detached {
     transform-origin: 50% 50%;
     stroke-dashoffset: 0em;
@@ -21,6 +24,7 @@
     transform: scaleX(-1);
     stroke: deeppink;
 }
+
 
 /*hover controls*/
 
@@ -38,6 +42,7 @@
     animation-fill-mode: both;
     transform-origin: 50% 50%;
 }
+
 
 /*animation defs*/
 
@@ -80,10 +85,10 @@
 }
 
 @keyframes re-center {
-    0% {
-        transform: translateX(4.5em);
+    30% {
+        width: 18em;
     }
     100% {
-        transform: translateX(0em);
+        width: 18em;
     }
 }
