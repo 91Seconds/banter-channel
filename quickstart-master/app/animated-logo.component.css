@@ -14,7 +14,7 @@
 /*static styles*/
 
 .c-attached {
-    stroke: deeppink;
+    stroke: #E53C6E;
 }
 
 .c-detached {
@@ -22,7 +22,15 @@
     stroke-dashoffset: 0em;
     stroke-dasharray: 0em, 30em;
     transform: scaleX(-1);
-    stroke: deeppink;
+    stroke: #E53C6E;
+}
+
+.b-circle {
+    stroke: #4E4E4E;
+}
+
+.b-ascender {
+    fill: #4E4E4E;
 }
 
 
@@ -32,8 +40,6 @@
     animation-name: attached;
     animation-duration: 0.5s;
     animation-fill-mode: both;
-    stroke-dashoffset: -25.5em;
-    stroke-dasharray: 0em, 25em;
 }
 
 .animated-logo svg:hover .c-detached {
@@ -42,6 +48,21 @@
     animation-fill-mode: both;
     transform-origin: 50% 50%;
 }
+
+
+/*.animated-logo svg:unhover .c-attached {
+    animation-name: attached;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+}
+
+.animated-logo svg:unhover .c-detached {
+    animation-name: detached;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+}*/
 
 
 /*animation defs*/
