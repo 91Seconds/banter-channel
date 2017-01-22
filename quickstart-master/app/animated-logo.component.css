@@ -1,8 +1,32 @@
+/*text styles*/
+
+.the {
+    color: #4E4E4E;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.banter {
+    color: #4E4E4E;
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+}
+
+.channel {
+    color: #E53C6E;
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+}
+
+
 /*centering the logo before the animation*/
 
 .animated-logo svg {
     width: 100px;
     height: 110px;
+    transform: scaleX(0.75) scaleY(0.75);
 }
 
 .animated-logo svg:hover {
@@ -101,7 +125,7 @@
     100% {
         stroke-dashoffset: -25;
         stroke-dasharray: 200, 200;
-        transform: rotate(-180deg) scaleX(-1);
+        transform: rotate(-190deg) scaleX(-1);
         transform-origin: 50%, 50%;
     }
 }
