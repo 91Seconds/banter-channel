@@ -14,6 +14,10 @@
     display: inline;
 }
 
+.menu-item {
+    display: inline;
+}
+
 .channel {
     color: #E53C6E;
     font-family: 'Open Sans', sans-serif;

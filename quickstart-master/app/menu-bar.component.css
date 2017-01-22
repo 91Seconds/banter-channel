@@ -1,0 +1,15 @@
+.menu-item {
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100px;
+    background: orange;
+}
+
+.menu-item h3 {
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    display: inline-block;
+    background: orange;
+}

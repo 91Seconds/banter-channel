@@ -6,6 +6,8 @@ import { AppComponent }  from './app.component';
 import { HexagonTileComponent } from './hexagon-tile.component'
 import { HexagonLayoutComponent } from './hexagon-layout.component'
 import { AnimatedLogoComponent } from './animated-logo.component'
+import { MenuBarComponent } from './menu-bar.component'
+
 import { PageService } from './page.service'
 
 @NgModule({
@@ -16,7 +18,8 @@ import { PageService } from './page.service'
     AppComponent,
     HexagonTileComponent,
     HexagonLayoutComponent,
-    AnimatedLogoComponent
+    AnimatedLogoComponent,
+    MenuBarComponent
   ],
   bootstrap:    [ AppComponent ],
   providers:    [ PageService ]
