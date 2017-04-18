@@ -1,7 +1,6 @@
-<html>
-
-<head>
+<html><head>
     <title>Angular QuickStart</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
@@ -14,446 +13,503 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('app').catch(function(err) {
-            console.error(err);
-        });
+      System.import('app').catch(function(err){ console.error(err); });
     </script>
-    <style id="style-1-cropbar-clipper">
-        /* Copyright 2014 Evernote Corporation. All rights reserved. */
-        
-        .en-markup-crop-options {
-            top: 18px !important;
-            left: 50% !important;
-            margin-left: -100px !important;
-            width: 200px !important;
-            border: 2px rgba(255, 255, 255, .38) solid !important;
-            border-radius: 4px !important;
-        }
-        
-        .en-markup-crop-options div div:first-of-type {
-            margin-left: 0px !important;
-        }
-    </style>
-    <style></style>
-    <style>
-        .animated-logo[_ngcontent-tyj-3] svg[_ngcontent-tyj-3] {
-            width: 10em;
-        }
-        
-        .animated-logo[_ngcontent-tyj-3] svg[_ngcontent-tyj-3]:hover {
-            animation-name: re-center;
-            animation-duration: 1s;
-            animation-fill-mode: both;
-        }
-        
-        .c-attached[_ngcontent-tyj-3] {
-            stroke: #E53C6E;
-        }
-        
-        .c-detached[_ngcontent-tyj-3] {
-            transform-origin: 50% 50%;
-            stroke-dashoffset: 0em;
-            stroke-dasharray: 0em, 30em;
-            transform: scaleX(-1);
-            stroke: #E53C6E;
-        }
-        
-        .b-circle[_ngcontent-tyj-3] {
-            stroke: #4E4E4E;
-        }
-        
-        .b-ascender[_ngcontent-tyj-3] {
-            fill: #4E4E4E;
-        }
-        
-        .animated-logo[_ngcontent-tyj-3] svg[_ngcontent-tyj-3]:hover .c-attached[_ngcontent-tyj-3] {
-            animation-name: attached;
-            animation-duration: 0.5s;
-            animation-fill-mode: both;
-        }
-        
-        .animated-logo[_ngcontent-tyj-3] svg[_ngcontent-tyj-3]:hover .c-detached[_ngcontent-tyj-3] {
-            animation-name: detached;
-            animation-duration: 0.5s;
-            animation-fill-mode: both;
-            transform-origin: 50% 50%;
-        }
-        
-        @keyframes attached {
-            5% {
-                stroke-dashoffset: -5.5em;
-                stroke-dasharray: 20em;
-            }
-            50% {
-                stroke-dashoffset: -25.5em;
-                stroke-dasharray: 0em, 25em;
-            }
-            100% {
-                stroke-dashoffset: -25.5em;
-                stroke-dasharray: 0em, 25em;
-            }
-        }
-        
-        @keyframes detached {
-            5% {
-                stroke-dashoffset: 0m;
-                stroke-dasharray: 0em, 30em;
-            }
-            45% {
-                stroke-dashoffset: 0em;
-                stroke-dasharray: -20em;
-                transform: rotate(0deg) scaleX(-1);
-                transform-origin: 50%, 50%;
-            }
-            80% {
-                stroke-dashoffset: -2.5em;
-                stroke-dasharray: 20em, 20em;
-            }
-            100% {
-                stroke-dashoffset: -2.5em;
-                stroke-dasharray: 20em, 20em;
-                transform: rotate(-180deg) scaleX(-1);
-                transform-origin: 50%, 50%;
-            }
-        }
-        
-        @keyframes re-center {
-            30% {
-                width: 18em;
-            }
-            100% {
-                width: 18em;
-            }
-        }
-    </style>
-    <style>
-        *[_ngcontent-tyj-2] {
-            margin: 0;
-            padding: 0;
-        }
-        
-        body[_ngcontent-tyj-2] {
-            background: rgb(123, 158, 158);
-        }
-        
-        #hexGrid[_ngcontent-tyj-2] {
-            overflow: hidden;
-            width: 90%;
-            margin: 0 auto;
-            padding: 0.866% 0;
-            font-family: 'Raleway', sans-serif;
-            font-size: 15px;
-        }
-        
-        #hexGrid[_ngcontent-tyj-2]:after {
-            content: "";
-            display: block;
-            clear: both;
-        }
-        
-        .hex[_ngcontent-tyj-2] {
-            background-color: deeppink;
-            position: relative;
-            list-style-type: none;
-            float: left;
-            overflow: hidden;
-            visibility: hidden;
-            outline: 1px solid transparent;
-            -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-            -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-            transform: rotate(-60deg) skewY(30deg) translatez(-1px);
-        }
-        
-        .hex[_ngcontent-tyj-2] *[_ngcontent-tyj-2] {
-            position: absolute;
-            visibility: visible;
-            outline: 1px solid transparent;
-        }
-        
-        .hexIn[_ngcontent-tyj-2] {
-            display: block;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            color: #fff;
-            overflow: hidden;
-            -webkit-transform: skewY(-30deg) rotate(60deg);
-            -ms-transform: skewY(-30deg) rotate(60deg);
-            transform: skewY(-30deg) rotate(60deg);
-        }
-        
-        .hex[_ngcontent-tyj-2] img[_ngcontent-tyj-2] {
-            left: -100%;
-            right: -100%;
-            width: 2*auto;
-            height: 100%;
-            margin: 0 auto;
-        }
-        
-        .hex[_ngcontent-tyj-2] h1[_ngcontent-tyj-2],
-        .hex[_ngcontent-tyj-2] p[_ngcontent-tyj-2] {
-            color: white;
-            width: 102%;
-            left: -1%;
-            padding: 5%;
-            box-sizing: border-box;
-            background-color: #E53C6E;
-            font-weight: 300;
-            -webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
-            transition: transform .2s ease-out, opacity .3s ease-out;
-        }
-        
-        .hex[_ngcontent-tyj-2] h1[_ngcontent-tyj-2] {
-            bottom: 50%;
-            padding-top: 50%;
-            font-size: 1.5em;
-            z-index: 1;
-            -webkit-transform: translateY(-100%) translatez(-1px);
-            -ms-transform: translateY(-100%) translatez(-1px);
-            transform: translateY(-100%) translatez(-1px);
-        }
-        
-        .hex[_ngcontent-tyj-2] h1[_ngcontent-tyj-2]:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 45%;
-            width: 10%;
-            text-align: center;
-            border-bottom: 1px solid #fff;
-        }
-        
-        .hex[_ngcontent-tyj-2] p[_ngcontent-tyj-2] {
-            top: 50%;
-            padding-bottom: 50%;
-            -webkit-transform: translateY(100%) translatez(-1px);
-            -ms-transform: translateY(100%) translatez(-1px);
-            transform: translateY(100%) translatez(-1px);
-        }
-        
-        .hexIn[_ngcontent-tyj-2]:hover h1[_ngcontent-tyj-2],
-        .hexIn[_ngcontent-tyj-2]:focus h1[_ngcontent-tyj-2],
-        .hexIn[_ngcontent-tyj-2]:hover p[_ngcontent-tyj-2],
-        .hexIn[_ngcontent-tyj-2]:focus p[_ngcontent-tyj-2] {
-            -webkit-transform: translateY(0%) translatez(-1px);
-            -ms-transform: translateY(0%) translatez(-1px);
-            transform: translateY(0%) translatez(-1px);
-        }
-        
-        @media (min-width:1201px) {
-            .hex[_ngcontent-tyj-2] {
-                width: 19.2%;
-                padding-bottom: 22.170%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(9n+6),
-            .hex[_ngcontent-tyj-2]:nth-child(9n+7),
-            .hex[_ngcontent-tyj-2]:nth-child(9n+8),
-            .hex[_ngcontent-tyj-2]:nth-child(9n+9) {
-                margin-top: -4.676%;
-                margin-bottom: -4.676%;
-                -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                transform: translateX(50%) rotate(-60deg) skewY(30deg);
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(9n+6):last-child,
-            .hex[_ngcontent-tyj-2]:nth-child(9n+7):last-child,
-            .hex[_ngcontent-tyj-2]:nth-child(9n+8):last-child,
-            .hex[_ngcontent-tyj-2]:nth-child(9n+9):last-child {
-                margin-bottom: 0;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(9n+6) {
-                margin-left: 0.5%;
-                clear: left;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(9n+10) {
-                clear: left;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(9n+2),
-            .hex[_ngcontent-tyj-2]:nth-child(9n+ 7) {
-                margin-left: 1%;
-                margin-right: 1%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(9n+3),
-            .hex[_ngcontent-tyj-2]:nth-child(9n+4),
-            .hex[_ngcontent-tyj-2]:nth-child(9n+8) {
-                margin-right: 1%;
-            }
-        }
-        
-        @media (max-width: 1200px) and (min-width:901px) {
-            .hex[_ngcontent-tyj-2] {
-                width: 24.25%;
-                padding-bottom: 28.001%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(7n+5),
-            .hex[_ngcontent-tyj-2]:nth-child(7n+6),
-            .hex[_ngcontent-tyj-2]:nth-child(7n+7) {
-                margin-top: -6.134%;
-                margin-bottom: -6.134%;
-                -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                transform: translateX(50%) rotate(-60deg) skewY(30deg);
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(7n+5):last-child,
-            .hex[_ngcontent-tyj-2]:nth-child(7n+6):last-child,
-            .hex[_ngcontent-tyj-2]:nth-child(7n+7):last-child {
-                margin-bottom: 0;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(7n+2),
-            .hex[_ngcontent-tyj-2]:nth-child(7n+6) {
-                margin-left: 1%;
-                margin-right: 1%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(7n+3) {
-                margin-right: 1%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(7n+8) {
-                clear: left;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(7n+5) {
-                clear: left;
-                margin-left: 0.5%;
-            }
-        }
-        
-        @media (max-width: 900px) and (min-width:601px) {
-            .hex[_ngcontent-tyj-2] {
-                width: 32.666%;
-                padding-bottom: 37.720%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(5n+4),
-            .hex[_ngcontent-tyj-2]:nth-child(5n+5) {
-                margin-top: -8.564%;
-                margin-bottom: -8.564%;
-                -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                transform: translateX(50%) rotate(-60deg) skewY(30deg);
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(5n+4):last-child,
-            .hex[_ngcontent-tyj-2]:nth-child(5n+5):last-child {
-                margin-bottom: 0;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(5n+4) {
-                margin-right: 1%;
-                margin-left: 0.5%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(5n+2) {
-                margin-left: 1%;
-                margin-right: 1%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(5n+6) {
-                clear: left;
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .hex[_ngcontent-tyj-2] {
-                width: 49.5%;
-                padding-bottom: 57.158%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(3n+3) {
-                margin-top: -13.423%;
-                margin-bottom: -13.423%;
-                -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
-                transform: translateX(50%) rotate(-60deg) skewY(30deg);
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(3n+3):last-child {
-                margin-bottom: 0;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(3n+3) {
-                margin-left: 0.5%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(3n+2) {
-                margin-left: 1%;
-            }
-            .hex[_ngcontent-tyj-2]:nth-child(3n+4) {
-                clear: left;
-            }
-        }
-        
-        @media (max-width: 400px) {
-            #hexGrid[_ngcontent-tyj-2] {
-                font-size: 13px;
-            }
-        }
-    </style>
-</head>
+  <style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
 
-<body>
-    <script id="__bs_script__">
-        //<![CDATA[
-        document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.6'><\/script>".replace("HOST", location.hostname));
-        //]]>
-    </script>
-    <script async="" src="/browser-sync/browser-sync-client.js?v=2.18.6"></script>
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style><style>h2[_ngcontent-jpk-0] {
+    color: #4E4E4E;
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}</style><style>.menu-item[_ngcontent-jpk-4] {
+    font-family: 'Open Sans', 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    width: 100px;
+    
+}
 
-    <my-app ng-version="2.4.3" _nghost-tyj-0="">
-        <div _ngcontent-tyj-0="" align="center">
-            <my-animated-logo _ngcontent-tyj-0="" _nghost-tyj-3="">
-                <div _ngcontent-tyj-3="" class="animated-logo">
-                    <svg _ngcontent-tyj-3="" height="11em" width="18em">
-        <circle _ngcontent-tyj-3="" class="b-circle" cx="5em" cy="6em" fill="transparent" r="4em" stroke="darkgrey" stroke-width="0.8em"></circle>
-        <rect _ngcontent-tyj-3="" class="b-ascender" fill="darkgrey" height="6em" width="1.4em" x="0.3em" y="0em"></rect>
-        <circle _ngcontent-tyj-3="" class="c-attached" cx="5em" cy="6em" fill="transparent" r="4em" stroke-dasharray="20em" stroke-dashoffset="-2.75em" stroke-width="0.8em"></circle>
-        <circle _ngcontent-tyj-3="" class="c-detached" cx="13em" cy="6em" fill="transparent" r="4em" stroke-dasharray="0em" stroke-dashoffset="0em" stroke-width="0.8em"></circle>
+.menu-item[_ngcontent-jpk-4]   h3[_ngcontent-jpk-4] {
+    margin: 0;
+    padding: 0;
+}
+
+div[_ngcontent-jpk-4] {
+    display: inline-flex;
+    vertical-align: middle;
+    
+}
+
+h3[_ngcontent-jpk-4] {
+    color: #4E4E4E;
+}</style><style>.the[_ngcontent-jpk-3] {
+    color: #4E4E4E;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.banter[_ngcontent-jpk-3] {
+    color: #4E4E4E;
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+}
+
+.menu-item[_ngcontent-jpk-3] {
+    display: inline;
+}
+
+.channel[_ngcontent-jpk-3] {
+    color: #E53C6E;
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+}
+
+
+
+
+.animated-logo[_ngcontent-jpk-3]   svg[_ngcontent-jpk-3] {
+    width: 100px;
+    height: 110px;
+    transform: scaleX(0.75) scaleY(0.75);
+}
+
+.animated-logo[_ngcontent-jpk-3]   svg[_ngcontent-jpk-3]:hover {
+    animation-name: re-center;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+
+
+.c-attached[_ngcontent-jpk-3] {
+    stroke: #E53C6E;
+}
+
+.c-detached[_ngcontent-jpk-3] {
+    transform-origin: 50% 50%;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 0, 300;
+    transform: scaleX(-1);
+    stroke: #E53C6E;
+}
+
+.b-circle[_ngcontent-jpk-3] {
+    stroke: #4E4E4E;
+}
+
+.b-ascender[_ngcontent-jpk-3] {
+    fill: #4E4E4E;
+}
+
+
+
+
+.animated-logo[_ngcontent-jpk-3]   svg[_ngcontent-jpk-3]:hover   .c-attached[_ngcontent-jpk-3] {
+    animation-name: attached;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+}
+
+.animated-logo[_ngcontent-jpk-3]   svg[_ngcontent-jpk-3]:hover   .c-detached[_ngcontent-jpk-3] {
+    animation-name: detached;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    transform-origin: 50% 50%;
+}
+
+
+
+
+
+
+
+@keyframes attached {
+    5% {
+        stroke-dashoffset: -55;
+        stroke-dasharray: 200;
+    }
+    50% {
+        stroke-dashoffset: -265;
+        stroke-dasharray: 0, 300;
+    }
+    100% {
+        stroke-dashoffset: -265;
+        stroke-dasharray: 0, 300;
+    }
+}
+
+@keyframes detached {
+    5% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 0, 300;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: -200;
+        transform: rotate(0deg) scaleX(-1);
+        transform-origin: 50%, 50%;
+    }
+    80% {
+        stroke-dashoffset: -25;
+        stroke-dasharray: 200, 200;
+    }
+    100% {
+        stroke-dashoffset: -25;
+        stroke-dasharray: 200, 200;
+        transform: rotate(-190deg) scaleX(-1);
+        transform-origin: 50%, 50%;
+    }
+}
+
+@keyframes re-center {
+    30% {
+        width: 180px;
+    }
+    100% {
+        width: 180px;
+    }
+}</style><style>*[_ngcontent-jpk-2] {
+    margin: 0;
+    padding: 0;
+}
+
+body[_ngcontent-jpk-2] {
+    background: rgb(123, 158, 158);
+}
+
+#hexGrid[_ngcontent-jpk-2] {
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.866% 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+
+#hexGrid[_ngcontent-jpk-2]:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hex[_ngcontent-jpk-2] {
+    background-color: deeppink;
+    position: relative;
+    list-style-type: none;
+    float: left;
+    overflow: hidden;
+    visibility: hidden;
+    outline: 1px solid transparent;
+    
+    -webkit-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+    -ms-transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+    transform: rotate(-60deg) skewY(30deg) translatez(-1px);
+}
+
+.hex[_ngcontent-jpk-2]   *[_ngcontent-jpk-2] {
+    position: absolute;
+    visibility: visible;
+    outline: 1px solid transparent;
+    
+}
+
+.hexIn[_ngcontent-jpk-2] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
+}
+
+
+
+
+.hex[_ngcontent-jpk-2]   img[_ngcontent-jpk-2] {
+    left: -100%;
+    right: -100%;
+    width: 2*auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.hex[_ngcontent-jpk-2]   h1[_ngcontent-jpk-2], .hex[_ngcontent-jpk-2]   p[_ngcontent-jpk-2] {
+    color: white;
+    width: 102%;
+    left: -1%;
+    
+    padding: 5%;
+    box-sizing: border-box;
+    background-color: #E53C6E;
+    
+    font-weight: 300;
+    -webkit-transition: -webkit-transform .2s ease-out, opacity .3s ease-out;
+    transition: transform .2s ease-out, opacity .3s ease-out;
+}
+
+.hex[_ngcontent-jpk-2]   h1[_ngcontent-jpk-2] {
+    bottom: 50%;
+    padding-top: 50%;
+    font-size: 1.5em;
+    z-index: 1;
+    -webkit-transform: translateY(-100%) translatez(-1px);
+    -ms-transform: translateY(-100%) translatez(-1px);
+    transform: translateY(-100%) translatez(-1px);
+}
+
+.hex[_ngcontent-jpk-2]   h1[_ngcontent-jpk-2]:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 10%;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+}
+
+.hex[_ngcontent-jpk-2]   p[_ngcontent-jpk-2] {
+    top: 50%;
+    padding-bottom: 50%;
+    -webkit-transform: translateY(100%) translatez(-1px);
+    -ms-transform: translateY(100%) translatez(-1px);
+    transform: translateY(100%) translatez(-1px);
+}
+
+
+
+
+.hexIn[_ngcontent-jpk-2]:hover   h1[_ngcontent-jpk-2], .hexIn[_ngcontent-jpk-2]:focus   h1[_ngcontent-jpk-2], .hexIn[_ngcontent-jpk-2]:hover   p[_ngcontent-jpk-2], .hexIn[_ngcontent-jpk-2]:focus   p[_ngcontent-jpk-2] {
+    -webkit-transform: translateY(0%) translatez(-1px);
+    -ms-transform: translateY(0%) translatez(-1px);
+    transform: translateY(0%) translatez(-1px);
+}
+
+
+
+
+@media (min-width:1201px) {
+    
+    .hex[_ngcontent-jpk-2] {
+        width: 19.2%;
+        
+        padding-bottom: 22.170%;
+        
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(9n+6), .hex[_ngcontent-jpk-2]:nth-child(9n+7), .hex[_ngcontent-jpk-2]:nth-child(9n+8), .hex[_ngcontent-jpk-2]:nth-child(9n+9) {
+        margin-top: -4.676%;
+        margin-bottom: -4.676%;
+        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(9n+6):last-child, .hex[_ngcontent-jpk-2]:nth-child(9n+7):last-child, .hex[_ngcontent-jpk-2]:nth-child(9n+8):last-child, .hex[_ngcontent-jpk-2]:nth-child(9n+9):last-child {
+        margin-bottom: 0;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(9n+6) {
+        margin-left: 0.5%;
+        clear: left;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(9n+10) {
+        clear: left;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(9n+2), .hex[_ngcontent-jpk-2]:nth-child(9n+ 7) {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(9n+3), .hex[_ngcontent-jpk-2]:nth-child(9n+4), .hex[_ngcontent-jpk-2]:nth-child(9n+8) {
+        margin-right: 1%;
+    }
+}
+
+@media (max-width: 1200px) and (min-width:901px) {
+    
+    .hex[_ngcontent-jpk-2] {
+        width: 24.25%;
+        
+        padding-bottom: 28.001%;
+        
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(7n+5), .hex[_ngcontent-jpk-2]:nth-child(7n+6), .hex[_ngcontent-jpk-2]:nth-child(7n+7) {
+        margin-top: -6.134%;
+        margin-bottom: -6.134%;
+        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(7n+5):last-child, .hex[_ngcontent-jpk-2]:nth-child(7n+6):last-child, .hex[_ngcontent-jpk-2]:nth-child(7n+7):last-child {
+        margin-bottom: 0;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(7n+2), .hex[_ngcontent-jpk-2]:nth-child(7n+6) {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(7n+3) {
+        margin-right: 1%;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(7n+8) {
+        clear: left;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(7n+5) {
+        clear: left;
+        margin-left: 0.5%;
+    }
+}
+
+@media (max-width: 900px) and (min-width:601px) {
+    
+    .hex[_ngcontent-jpk-2] {
+        width: 32.666%;
+        
+        padding-bottom: 37.720%;
+        
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(5n+4), .hex[_ngcontent-jpk-2]:nth-child(5n+5) {
+        margin-top: -8.564%;
+        margin-bottom: -8.564%;
+        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(5n+4):last-child, .hex[_ngcontent-jpk-2]:nth-child(5n+5):last-child {
+        margin-bottom: 0;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(5n+4) {
+        margin-right: 1%;
+        margin-left: 0.5%;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(5n+2) {
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(5n+6) {
+        clear: left;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .hex[_ngcontent-jpk-2] {
+        width: 49.5%;
+        
+        padding-bottom: 57.158%;
+        
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(3n+3) {
+        margin-top: -13.423%;
+        margin-bottom: -13.423%;
+        -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+        transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(3n+3):last-child {
+        margin-bottom: 0;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(3n+3) {
+        margin-left: 0.5%;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(3n+2) {
+        margin-left: 1%;
+    }
+    .hex[_ngcontent-jpk-2]:nth-child(3n+4) {
+        clear: left;
+    }
+}
+
+@media (max-width: 400px) {
+    #hexGrid[_ngcontent-jpk-2] {
+        font-size: 13px;
+    }
+}</style></head>
+
+  <body><script id="__bs_script__">//<![CDATA[
+    document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.18.6'><\/script>".replace("HOST", location.hostname));
+//]]></script><script async="" src="/browser-sync/browser-sync-client.js?v=2.18.6"></script>
+
+    <my-app ng-version="2.4.3" _nghost-jpk-0=""><div _ngcontent-jpk-0="" align="center">
+    <my-menu-bar _ngcontent-jpk-0="" _nghost-jpk-4=""><div _ngcontent-jpk-4="" class="menu-item">
+    <h3 _ngcontent-jpk-4="">HOME</h3></div>
+<div _ngcontent-jpk-4="" class="menu-item">
+    <h3 _ngcontent-jpk-4="">HISTORY</h3></div>
+<div _ngcontent-jpk-4="" class="menu-item">
+    <h3 _ngcontent-jpk-4="">ABOUT</h3></div>
+<div _ngcontent-jpk-4="">
+    <my-animated-logo _ngcontent-jpk-4="" _nghost-jpk-3=""><h6 _ngcontent-jpk-3="" class="the">the</h6>
+<div _ngcontent-jpk-3="" class="menu-item">
+    <h4 _ngcontent-jpk-3="" class="banter">banter</h4></div>
+<div _ngcontent-jpk-3="" class="menu-item">
+    <h4 _ngcontent-jpk-3="" class="channel">channel</h4></div>
+<div _ngcontent-jpk-3="" class="animated-logo">
+    <svg _ngcontent-jpk-3="" class="fook" height="110" width="180">
+        <circle _ngcontent-jpk-3="" class="b-circle" cx="50" cy="60" fill="transparent" r="42" stroke="darkgrey" stroke-width="16"></circle>
+        <rect _ngcontent-jpk-3="" class="b-ascender" fill="darkgrey" height="60" width="16" x="0" y="0"></rect>
+        <circle _ngcontent-jpk-3="" class="c-attached" cx="50" cy="60" fill="transparent" r="42" stroke-dasharray="200" stroke-dashoffset="-27.5" stroke-width="16"></circle>
+        <circle _ngcontent-jpk-3="" class="c-detached" cx="134" cy="60" fill="transparent" r="42" stroke-dasharray="0" stroke-dashoffset="0" stroke-width="16"></circle>
     </svg>
-                </div>
-            </my-animated-logo>
-            <h1 _ngcontent-tyj-0="">The Banter Channel</h1>
-            <my-hexagon-layout _ngcontent-tyj-0="" _nghost-tyj-2="">
-                <ul _ngcontent-tyj-2="" id="hexGrid">
-                    <!--template bindings={
+</div></my-animated-logo>
+</div>
+<div _ngcontent-jpk-4="" class="menu-item">
+    <h3 _ngcontent-jpk-4="">COUNCIL</h3></div>
+<div _ngcontent-jpk-4="" class="menu-item">
+    <h3 _ngcontent-jpk-4="">PROJECTS</h3></div>
+<div _ngcontent-jpk-4="" class="menu-item">
+    <h3 _ngcontent-jpk-4="">PODCAST</h3></div></my-menu-bar>
+    <h2 _ngcontent-jpk-0="">a cheeky website</h2>
+    <my-hexagon-layout _ngcontent-jpk-0="" _nghost-jpk-2=""><ul _ngcontent-jpk-2="" id="hexGrid">
+    <!--template bindings={
   "ng-reflect-ng-for-of": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]"
-}-->
-                    <li _ngcontent-tyj-2="" class="hex">
-                        <a _ngcontent-tyj-2="" class="hexIn" href="#">
-                            <img _ngcontent-tyj-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/WS.svg" src="http://svgshare.com/i/WS.svg">
-                            <h1 _ngcontent-tyj-2="">This is a title</h1>
-                            <p _ngcontent-tyj-2="">Some sample text about the article this hexagon leads to</p>
-                        </a>
-                    </li>
-                    <li _ngcontent-tyj-2="" class="hex">
-                        <a _ngcontent-tyj-2="" class="hexIn" href="#">
-                            <img _ngcontent-tyj-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/WF.svg" src="http://svgshare.com/i/WF.svg">
-                            <h1 _ngcontent-tyj-2="">This is a title</h1>
-                            <p _ngcontent-tyj-2="">Some sample text about the article this hexagon leads to</p>
-                        </a>
-                    </li>
-                    <li _ngcontent-tyj-2="" class="hex">
-                        <a _ngcontent-tyj-2="" class="hexIn" href="#">
-                            <img _ngcontent-tyj-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/XH.svg" src="http://svgshare.com/i/XH.svg">
-                            <h1 _ngcontent-tyj-2="">This is a title</h1>
-                            <p _ngcontent-tyj-2="">Some sample text about the article this hexagon leads to</p>
-                        </a>
-                    </li>
-                    <li _ngcontent-tyj-2="" class="hex">
-                        <a _ngcontent-tyj-2="" class="hexIn" href="#">
-                            <img _ngcontent-tyj-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/XJ.svg" src="http://svgshare.com/i/XJ.svg">
-                            <h1 _ngcontent-tyj-2="">This is a title</h1>
-                            <p _ngcontent-tyj-2="">Some sample text about the article this hexagon leads to</p>
-                        </a>
-                    </li>
-                    <li _ngcontent-tyj-2="" class="hex">
-                        <a _ngcontent-tyj-2="" class="hexIn" href="#">
-                            <img _ngcontent-tyj-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/XK.svg" src="http://svgshare.com/i/XK.svg">
-                            <h1 _ngcontent-tyj-2="">This is a title</h1>
-                            <p _ngcontent-tyj-2="">Some sample text about the article this hexagon leads to</p>
-                        </a>
-                    </li>
-                    <li _ngcontent-tyj-2="" class="hex">
-                        <a _ngcontent-tyj-2="" class="hexIn" href="#">
-                            <img _ngcontent-tyj-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/Xo.svg" src="http://svgshare.com/i/Xo.svg">
-                            <h1 _ngcontent-tyj-2="">This is a title</h1>
-                            <p _ngcontent-tyj-2="">Some sample text about the article this hexagon leads to</p>
-                        </a>
-                    </li>
-                </ul>
-            </my-hexagon-layout>
-        </div>
-    </my-app>
+}--><li _ngcontent-jpk-2="" class="hex">
+        <a _ngcontent-jpk-2="" class="hexIn" href="#">
+            <img _ngcontent-jpk-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/WS.svg" src="http://svgshare.com/i/WS.svg">
+            <h1 _ngcontent-jpk-2="">This is a title</h1>
+            <p _ngcontent-jpk-2="">Some sample text about the article this hexagon leads to</p>
+        </a>
+    </li><li _ngcontent-jpk-2="" class="hex">
+        <a _ngcontent-jpk-2="" class="hexIn" href="#">
+            <img _ngcontent-jpk-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/WF.svg" src="http://svgshare.com/i/WF.svg">
+            <h1 _ngcontent-jpk-2="">This is a title</h1>
+            <p _ngcontent-jpk-2="">Some sample text about the article this hexagon leads to</p>
+        </a>
+    </li><li _ngcontent-jpk-2="" class="hex">
+        <a _ngcontent-jpk-2="" class="hexIn" href="#">
+            <img _ngcontent-jpk-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/XH.svg" src="http://svgshare.com/i/XH.svg">
+            <h1 _ngcontent-jpk-2="">This is a title</h1>
+            <p _ngcontent-jpk-2="">Some sample text about the article this hexagon leads to</p>
+        </a>
+    </li><li _ngcontent-jpk-2="" class="hex">
+        <a _ngcontent-jpk-2="" class="hexIn" href="#">
+            <img _ngcontent-jpk-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/XJ.svg" src="http://svgshare.com/i/XJ.svg">
+            <h1 _ngcontent-jpk-2="">This is a title</h1>
+            <p _ngcontent-jpk-2="">Some sample text about the article this hexagon leads to</p>
+        </a>
+    </li><li _ngcontent-jpk-2="" class="hex">
+        <a _ngcontent-jpk-2="" class="hexIn" href="#">
+            <img _ngcontent-jpk-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/XK.svg" src="http://svgshare.com/i/XK.svg">
+            <h1 _ngcontent-jpk-2="">This is a title</h1>
+            <p _ngcontent-jpk-2="">Some sample text about the article this hexagon leads to</p>
+        </a>
+    </li><li _ngcontent-jpk-2="" class="hex">
+        <a _ngcontent-jpk-2="" class="hexIn" href="#">
+            <img _ngcontent-jpk-2="" alt="" style="background-color:dimgrey;" ng-reflect-src="http://svgshare.com/i/Xo.svg" src="http://svgshare.com/i/Xo.svg">
+            <h1 _ngcontent-jpk-2="">This is a title</h1>
+            <p _ngcontent-jpk-2="">Some sample text about the article this hexagon leads to</p>
+        </a>
+    </li>
+</ul></my-hexagon-layout>
+</div></my-app>
+  
 
-
-</body>
-
-</html>
+</body></html>
